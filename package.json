@@ -1,0 +1,9 @@
+{
+  "name": "x-radio-player-react",
+  "version": "1.0.0",
+  "description": "a radio player",
+  "main": "index.js",
+  "repository": "git@github.com:yakii9/x-radio-player-react.git",
+  "author": "段诗闻 <yakii9@vip.qq.com>",
+  "license": "MIT"
+}
