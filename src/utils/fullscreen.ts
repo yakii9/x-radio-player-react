@@ -1,5 +1,5 @@
 class Fullscreen {
-  request(elm) {
+  request(elm: HTMLElement) {
     if (elm.requestFullscreen) {
       elm.requestFullscreen();
     } else if (elm.webkitRequestFullscreen) {
@@ -41,14 +41,14 @@ class Fullscreen {
     );
   }
 
-  addEventListener(handler) {
+  addEventListener(handler: () => void) {
     document.addEventListener('fullscreenchange', handler);
     document.addEventListener('webkitfullscreenchange', handler);
     document.addEventListener('mozfullscreenchange', handler);
     document.addEventListener('MSFullscreenChange', handler);
   }
 
-  removeEventListener(handler) {
+  removeEventListener(handler: () => void) {
     document.removeEventListener('fullscreenchange', handler);
     document.removeEventListener('webkitfullscreenchange', handler);
     document.removeEventListener('mozfullscreenchange', handler);

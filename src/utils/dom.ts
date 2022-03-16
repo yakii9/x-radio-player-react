@@ -1,4 +1,4 @@
-export function findElPosition(el) {
+export function findElPosition(el: HTMLElement) {
   let box;
 
   if (el.getBoundingClientRect && el.parentNode) {
@@ -28,7 +28,7 @@ export function findElPosition(el) {
   };
 }
 
-export function getPointerPosition(el, event) {
+export function getPointerPosition(el: HTMLElement, event: MouseEvent) {
   const position = {};
   const box = findElPosition(el);
   const boxW = el.offsetWidth;
@@ -50,21 +50,19 @@ export function getPointerPosition(el, event) {
   return position;
 }
 
-// blur an element
-export function blurNode(reactNode) {
+export function blurNode(reactNode: React.ReactNode) {
   if (reactNode && reactNode.blur) {
     reactNode.blur();
   }
 }
 
-// focus an element
-export function focusNode(reactNode) {
+export function focusNode(reactNode: React.ReactNode) {
   if (reactNode && reactNode.focus) {
     reactNode.focus();
   }
 }
 
-export function hasClass(elm, cls) {
+export function hasClass(elm: HTMLElement, cls: string) {
   const classes = elm.className.split(' ');
   for (let i = 0; i < classes.length; i++) {
     if (classes[i].toLowerCase() === cls.toLowerCase()) {
